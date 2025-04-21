@@ -1,0 +1,286 @@
+/* リセットCSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* ヘッダー */
+header {
+  width: 100vw;
+  height: 83px;
+  padding-right: 174px;
+  padding-left: 174px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* ヘッダーコンテナ */
+.header_container {
+  width: 768px;
+  height: 83px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-right: 52px;
+  padding-bottom: 16px;
+  padding-left: 52px;
+  align-items: center;
+}
+
+/* ロゴ */
+.logo {
+  width: 160px;
+  height: 51px;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* ナビゲーション */
+.nav {
+  width: 125px;
+  height: 32px;
+  display: flex;
+  gap: 32px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  text-align: center;
+}
+
+.nav .nav-item {
+  text-decoration: none;
+  color: #333;
+  font-family: Helvetica;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: center;
+}
+
+nav a.about {
+  width: 42px;
+  height: 18px;
+}
+
+nav a.bicycle {
+  width: 51px;
+  height: 18px;
+}
+
+nav a:hover {
+  color: #007bff;
+}
+
+.mainvisual-image {
+  width: 100%;
+}
+
+.mainvisual-iamge-container {
+  width: 100vw;
+}
+
+/* メイン */
+main {
+  width: 1512px;
+  height: 3149px;
+  margin: 0 auto;
+}
+
+/* ヒーロー */
+.hero {
+  width: 2081.30078125px;
+  height: 800px;
+  gap: 10px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 2081.30078125px;
+  height: 800px;
+  object-fit: cover;
+}
+
+/* セクション共通 */
+.section {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* アバウト */
+.about {
+  width: 768px;
+  height: 534px;
+  gap: 32px;
+  padding-top: 64px;
+  padding-right: 615px;
+  padding-bottom: 64px;
+  padding-left: 615px;
+}
+
+.about .frame14 {
+  width: 70px;
+  height: 32px;
+  gap: 10px;
+  padding-bottom: 4px;
+  border-bottom-width: 1px;
+  border-bottom: 1px solid #a1a1a1;
+  text-align: center;
+}
+
+.about .frame14 h2 {
+  width: 70px;
+  height: 28px;
+  gap: 10px;
+  font-family: Helvetica;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.about--content {
+  width: 768px;
+  height: 342px;
+  gap: 24px;
+  padding-right: 10px;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about--content img {
+  width: 256px;
+  height: 256px;
+}
+
+.about--content .name {
+  width: 141px;
+  height: 23px;
+  font-family: Helvetica;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.about--content .frame1 {
+  width: 619px;
+  height: 15px;
+  gap: 4px;
+  text-align: center;
+}
+
+.about--content .address {
+  font-family: Helvetica;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+/* メインコンテンツの自転車セクション */
+.bicycle-section {
+  width: 768px;
+  height: 1815px;
+  gap: 32px;
+  padding-top: 64px;
+  padding-right: 615px;
+  padding-bottom: 128px;
+  padding-left: 615px;
+}
+
+.bicycle-section .frame14 {
+  width: 85px;
+  height: 32px;
+  gap: 10px;
+  padding-bottom: 4px;
+  border-bottom-width: 1px;
+  border-bottom: 1px solid #a1a1a1;
+  text-align: center;
+}
+
+.bicycle-section .frame14 h2 {
+  width: 85px;
+  height: 28px;
+  gap: 10px;
+  font-family: Helvetica;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.bicycle--content {
+  width: 768px;
+  height: 1559px;
+  gap: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bicycle--content .frame15,
+.bicycle--content .frame16,
+.bicycle--content .frame17 {
+  width: 768px;
+  height: 477px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bicycle--content img {
+  width: 640px;
+  height: 424px;
+  object-fit: cover;
+}
+
+.bicycle--content .title {
+  width: 64px;
+  height: 18px;
+  font-family: Helvetica;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  margin-top: 10px;
+}
+
+.bicycle--content .text {
+  width: 310px;
+  height: 15px;
+  font-family: Helvetica;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  margin-top: 5px;
+}
