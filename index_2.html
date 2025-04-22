@@ -15,7 +15,7 @@
           </a>
         </div>
         <nav class="main-nav">
-          <ul>
+          <ul class="">
             <li><a href="#about">About</a></li>
             <li><a href="#works">Works</a></li>
             <li><a href="#news">News</a></li>
@@ -31,13 +31,20 @@
     </header>
 
     <main>
-      <!-- ヒーローセクション（大きな画像） -->
       <section class="hero-section">
-        <img
-          src="images/mainvisual-pc.png"
-          alt="建築イメージ"
-          class="hero-image"
-        />
+        <picture>
+          <source
+            media="(max-width: 375px)"
+            srcset="images/mainvisual-sp.png"
+            class="hero-image"
+          />
+          <source
+            media="(max-width: 1200px)"
+            srcset="images/mainvisual-pc.png"
+            class="hero-image"
+          />
+          <img src="images/mainvisual-pc.png" class="hero-image" />
+        </picture>
       </section>
 
       <!-- Aboutセクション -->

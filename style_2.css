@@ -279,14 +279,14 @@ section {
 }
 
 /* レスポンシブ - ヘッダー */
-@media (max-width: 1200px) {
+@media screen and (min-width: 769px) and (max-width: 1200px) {
   .header-container {
     max-width: 90%;
     width: 100%;
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (min-width: 374px) and (max-width: 768px) {
   .header-container {
     width: 100%;
     height: auto;
@@ -298,7 +298,6 @@ section {
   .main-nav {
     width: 100%;
     height: auto;
-    margin-top: 20px;
   }
 
   .main-nav ul {
@@ -426,36 +425,237 @@ section {
 
 /* 375px以下の超小型スマートフォン向け */
 @media (max-width: 375px) {
-  main {
-    padding: 0 10px;
+  /* 基本レイアウト調整 */
+  body {
+    width: 100%;
+    overflow-x: hidden;
+    min-width: 320px; /* 最小幅を設定して縮小を制限 */
   }
 
+  /* コンテナ固定幅の設定 */
+  .site-header,
+  main,
+  .site-footer {
+    min-width: 320px; /* 最小幅を設定 */
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  main {
+    padding: 0;
+  }
+
+  /* セクション共通設定 */
+  section {
+    margin-bottom: 40px;
+    position: relative;
+  }
+
+  /* 特定のセクションにだけ余白を設定 */
+  section:not(.hero-section) {
+    padding: 0 20px;
+  }
+
+  /* ヘッダーコンテナの調整 */
   .header-container {
-    padding: 15px 10px;
+    width: 100%;
+    display: flex;
+    padding: 30px 20px;
+    flex-direction: column;
+    align-items: center;
+    min-width: 320px; /* 最小幅を設定 */
+  }
+
+  /* ロゴ関連の調整 */
+  .logo {
+    width: auto;
+    height: auto;
+    margin-bottom: 15px;
+    text-align: center;
   }
 
   .logo-text {
     font-size: 24px;
+    text-align: center;
+  }
+
+  /* ナビゲーションの調整 */
+  .main-nav {
+    width: 100%;
+    height: auto;
   }
 
   .main-nav ul {
-    gap: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    flex-wrap: nowrap; /* 折り返しを防止 */
+  }
+
+  .main-nav li {
+    flex: 1; /* 均等に幅を分配 */
+    text-align: center; /* テキストを中央揃え */
+    white-space: nowrap; /* テキスト折り返し防止 */
   }
 
   .main-nav li a {
+    font-size: 13px; /* さらに小さいサイズに */
+    padding: 5px 2px;
+    display: block;
+    text-align: center;
+  }
+
+  /* セクションタイトルの調整 */
+  .section-title {
+    font-size: 18px;
+    margin: 40px 0 20px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  /* ヒーローセクションの調整 */
+  .hero-section {
+    width: 100%;
+    height: auto;
+    margin-bottom: 40px;
+    padding: 0; /* 余白なし */
+    position: relative; /* 位置関係を明確に */
+    left: 0; /* 左端に固定 */
+  }
+
+  .hero-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block; /* インライン要素の余白を排除 */
+  }
+
+  /* About セクションの調整 */
+  .about-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .profile-image {
+    display: none; /* 画像には表示されていないため非表示に */
+  }
+
+  .profile-info {
+    text-align: left;
+  }
+
+  .profile-info h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .profile-text,
+  .profile-text-jp {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  /* Works セクションの調整 */
+  .works-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .work-item {
+    height: auto;
+  }
+
+  .work-item img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+  }
+
+  /* News セクションの調整 */
+  .news-list {
+    width: 100%;
+  }
+
+  .news-item,
+  .news-item-topBorder {
+    flex-direction: column;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .news-item-topBorder {
+    border-top: 1px solid #ddd;
+  }
+
+  .news-date {
+    flex: none;
+    margin-bottom: 5px;
+    font-size: 12px;
+  }
+
+  .news-title {
+    font-size: 13px;
+  }
+
+  /* Contact セクションの調整 */
+  .contact-form {
+    width: 100%;
+  }
+
+  .form-group {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+    margin-right: 0;
+    display: block;
     font-size: 14px;
   }
 
-  .hero-section {
-    height: 200px;
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    height: auto;
+    min-height: 40px;
+    font-size: 14px;
   }
 
-  .works-grid {
-    gap: 8px;
-  }
-
-  .profile-image img {
-    width: 100px;
+  .form-group textarea {
     height: 100px;
+    min-height: 100px;
+  }
+
+  .form-submit {
+    text-align: center;
+    margin-top: 30px;
+    padding-left: 0;
+  }
+
+  .submit-btn {
+    width: 150px;
+    padding: 12px 10px;
+    background-color: #333;
+    font-size: 14px;
+    min-height: 44px;
+  }
+
+  .main-nav ul li:last-child,
+  .main-nav ul li:last-child a,
+  .main-nav ul li a.instagram-icon,
+  li:has(.instagram-icon),
+  .instagram-icon {
+    display: none !important;
   }
 }
