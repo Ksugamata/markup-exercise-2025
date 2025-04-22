@@ -10,19 +10,19 @@
     <header class="site-header">
       <div class="header-container">
         <div class="logo">
-          <a href="index.html">
+          <a href="index_2.html">
             <span class="logo-text">My Works</span>
           </a>
         </div>
         <nav class="main-nav">
           <ul>
-            <li><a href="about.html">About</a></li>
-            <li><a href="works.html">Works</a></li>
-            <li><a href="news.html">News</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#works">Works</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
             <li>
               <a href="https://www.instagram.com/" class="instagram-icon">
-                <img src="instagram-icon.png" alt="Instagram" />
+                <img src="images/icon-instagram.png" alt="Instagram" />
               </a>
             </li>
           </ul>
@@ -31,14 +31,129 @@
     </header>
 
     <main>
-      <!-- ここにメインコンテンツが入ります -->
-      <h1>メインコンテンツ</h1>
-      <p>ここにコンテンツが入ります。</p>
+      <!-- ヒーローセクション（大きな画像） -->
+      <section class="hero-section">
+        <img
+          src="images/mainvisual-pc.png"
+          alt="建築イメージ"
+          class="hero-image"
+        />
+      </section>
+
+      <!-- Aboutセクション -->
+      <section class="about-section" id="about">
+        <h2 class="section-title"><b>About</b></h2>
+        <div class="about-content">
+          <div class="profile-image">
+            <img src="images/about.png" alt="プロフィール画像" />
+          </div>
+          <div class="profile-info">
+            <h3>Xxxxx</h3>
+            <p class="profile-text">
+              2th Floor xxxxx Building x-x-x Nishiazabu, Minato-ku, Tokyo
+              106-0031 Japan<br />
+              tel: 000-0000-0000<br />
+              UTT WWW.AAAAAAS<br />
+              mail: xxx@xxxxxx.jp<br />
+            </p>
+            <p class="profile-text-jp">
+              プロフィールテキストテキストテキストテキストテキストテキストテキストテキストテキストストテキストテキストテキストテ
+              キストテキストテキストテキストテキストテキストテキストテキスト
+              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキス
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Worksセクション -->
+      <section class="works-section" id="works">
+        <h2 class="section-title"><b>Works</b></h2>
+        <div class="works-grid">
+          <div class="work-item">
+            <a href="work-detail.html">
+              <img src="images/works1.png" alt="作品イメージ1" />
+            </a>
+          </div>
+          <div class="work-item">
+            <a href="work-detail.html">
+              <img src="images/works2.png" alt="作品イメージ2" />
+            </a>
+          </div>
+          <div class="work-item">
+            <a href="work-detail.html">
+              <img src="images/works3.png" alt="作品イメージ3" />
+            </a>
+          </div>
+          <div class="work-item">
+            <a href="work-detail.html">
+              <img src="images/works4.png" alt="作品イメージ4" />
+            </a>
+          </div>
+          <div class="work-item">
+            <a href="work-detail.html">
+              <img src="images/works5.png" alt="作品イメージ5" />
+            </a>
+          </div>
+          <div class="work-item">
+            <a href="work-detail.html">
+              <img src="images/works6.png" alt="作品イメージ6" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Newsセクション -->
+      <section class="news-section" id="news">
+        <h2 class="section-title"><b>News</b></h2>
+        <div class="news-list">
+          <div class="news-item news-item-topBorder">
+            <div class="news-date">　2023.07.23</div>
+            <div class="news-title">デザイン雑誌「〇〇」に記載されました。</div>
+          </div>
+          <div class="news-item">
+            <div class="news-date">　2023.06.15</div>
+            <div class="news-title">デザイン雑誌「〇〇」に記載されました。</div>
+          </div>
+          <div class="news-item">
+            <div class="news-date">　2023.05.10</div>
+            <div class="news-title">デザイン雑誌「〇〇」に記載されました。</div>
+          </div>
+          <div class="news-item">
+            <div class="news-date">　2023.04.22</div>
+            <div class="news-title">デザイン雑誌「〇〇」に記載されました。</div>
+          </div>
+          <div class="news-item">
+            <div class="news-date">　2023.04.01</div>
+            <div class="news-title">デザイン雑誌「〇〇」に記載されました。</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contactセクション -->
+      <section class="contact-section" id="contact">
+        <h2 class="section-title"><b>Contact</b></h2>
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name">NAME</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="message">MESSAGE</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+        </form>
+        <div class="form-submit">
+          <button type="submit" class="submit-btn">送信</button>
+        </div>
+      </section>
     </main>
 
-    <footer>
-      <!-- フッターコンテンツ -->
-      <p>&copy; 2025 My Works. All rights reserved.</p>
+    <footer class="site-footer">
+      <p>© 2024 Bullet Group</p>
     </footer>
   </body>
 </html>
